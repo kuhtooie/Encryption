@@ -105,3 +105,8 @@ class Sha_codes:
         for i in d:
             c += i + " "
         return self.scramble(c)
+        
+        
+        def shuffle(self):
+            e = self.make_sha()
+            return e[42:74]+e[:round(len(e)/2)]

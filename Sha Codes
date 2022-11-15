@@ -81,8 +81,8 @@ class Sha_codes:
 
             if i < 1:
                 a = l1
-            elif i < 1:
-                a = l1
+            elif i < 2:
+                a = l2
             else:
                 a = l3
 

@@ -4,27 +4,27 @@ from random import randint
 class Sha_codes:
 
     def __init__(self):
-        pass
+        self.code = ''
+        self.list = []
 
-    def scramble_chain(self, phrase,length):
-        phrases = []
-        phrase = phrase.split(" ")
-        for i in range(length):
-            b = len(phrase) - 1
+    def scramble_chain(self):
+        self.list = []
+        self.code = self.code.split(" ")
+        for i in self.code:
+            b = len(self.code) - 1
             d = []
             while b >= 0:
-                c = one(0,one(0, b))
-                d.append(phrase[c])
-                phrase.pop(c)
+                c = randint(0,randint(0, b))
+                d.append(self.code[c])
+                self.code.pop(c)
                 b -= 1
                 c = ''
                 for i in d:
                     c += i + " "
-                phrases.append(c)
-        return phrases
+                self.list.append(c)
 
 
-    def brute_scramble():
+    def brute_scramble(self):
         l1 = ['a', 'b', 'c', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
               't', 'u', 'v', 'w', 'x', 'y', 'z']
         l2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -32,21 +32,20 @@ class Sha_codes:
         d = []
         for i in range(2):
             if i < 1:
-                a = l1
+                self.list = l1
             else:
-                a = l2
+                self.list = l2
 
             while b >= 0:
-                c = one(0,one(0, b))
-                d.append(str(a[c]))
-                a.pop(c)
+                c = randint(0,randint(0, b))
+                d.append(str(self.list[c]))
+                self.list.pop(c)
                 b -= 1
             b = len(l2) - 1
 
-        c = ''
+        self.code = ""
         for i in d:
-            c += i + " "
-        return c
+            self.code += i + " "
 
     def scramble(self, phrase):
         phrase = phrase.split(" ")
@@ -57,20 +56,18 @@ class Sha_codes:
             d.append(phrase[c])
             phrase.pop(c)
             b -= 1
-            c = ''
+            self.code = ''
             for i in d:
-                c += i + " "
-        return c
-        
+                self.code += i + " "
+
     def scramble_list(self, list):
         b = len(list) - 1
-        d = []
+        self.list = []
         while b >= 0:
-            c = one(0,one(0, b))
-            d.append(list[c])
+            c = randint(0,randint(0, b))
+            self.list.append(list[c])
             list.pop(c)
             b -= 1
-        return d
 
     def make_sha(self):
 
@@ -90,7 +87,7 @@ class Sha_codes:
                 a = l3
 
             while b >= 0:
-                c = randint(0,one(0, b))
+                c = randint(0,randint(0, b))
                 d.append(str(a[c]))
                 a.pop(c)
                 b -= 1
@@ -99,14 +96,20 @@ class Sha_codes:
             else:
                 b = len(l3) - 1
 
-        self.scramble(d)
+        self.scramble_list(d)
+        self.code = ''
+        for i in self.list:
+            self.code += i + " "
 
-        c = ''
-        for i in d:
-            c += i + " "
-        return self.scramble(c)
-        
-        
-        def shuffle(self):
-            e = self.make_sha()
-            return e[42:74]+e[:round(len(e)/2)]
+        self.scramble(self.code)
+
+
+    def run(self):
+        b = 0
+        from datetime import datetime
+        while b > -1:
+            e = datetime.now().minute
+            if e in [5,15,30,45,00]:
+                self.brute_scramble()
+                self.scramble_chain()
+                self.make_sha()

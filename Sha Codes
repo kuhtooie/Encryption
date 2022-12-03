@@ -1,7 +1,7 @@
 from random import randint
 
 
-class Sha_codes:
+class Hash_codes:
 
     def __init__(self):
         self.code = ''

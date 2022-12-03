@@ -149,7 +149,9 @@ class Sha_codes:
 
     def stumble(self):
         self.make_sha()
-        self.code = self.code[47::-1] + self.code
+        code = self.code[round((len(self.code)-1)/2)::] + self.code
+        self.make_sha()
+        self.code = self.code + code
 
     def shuffle_tree(self):
         pass

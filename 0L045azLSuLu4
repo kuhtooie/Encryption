@@ -1,0 +1,25 @@
+
+from random import randint
+
+class MFI:
+    
+    def __init__(self,data="""S0703E6011HMM53234363879L19M26H38593M6SHH8363LLL2358HLRSRS3VAfundlyo{f[3tTc053SiS][VticeS]]{S18VVoiSBite3}[BeSSeVSSoS{8u]aexu8SS][SC058SSS][exrrStttnSottSteS][ESaeSe][2Vaoxe][eiccLe][028ALA][9tBVr][xixu[S8S[tt8tS][on{sxrr}mmit][8e8a2iSccSSSituP][LuVot2rttSsma][2oeSrcrr]SierraClinic[BrS8]NSAi[S0A][rS2SetS][iSAStc][eSitSe][xxLiS][8toui][8tScr][t2crrS][ttS2eicrtS][H88888888888SSSSS8S3858SSSSSSSS08858888SSS8S]{UberProCard35r437S87828rS4773778r88Ur8S8Mr7MU8S8996476TB4e374S[J78r39SS148STSSS54S4SSS]tr[SdMSSi4SSSSSSS]}[mapE8TcetSt1ueSS44444S4B4444iB4z4S]=Tattoos5ISe44S4_098TS=[64iSSS4]BTC33TCcr4SttuuSu588300284000rPaU8888SS8S83PTPS8S8CoinBaser3BS0444B[ASUprepatortAcademy[S2[zz]]][[cofferush[jfap3f48zut4ha4S4z4t444z4S65futSzu{1Ce;aJ},B[a]VmL5[uz]S]]][Buddies838SBie44SSS444S4ii4S4SS][LyftCoin9MBC9BBSBtoMM38SU8SyCMSMB1M38oSSSoS][StephieRuiz[{RenSS:5oteM,z:[cS8SrS4S4,SrS87BSSr44S4]}<>];alexDent[CSSBCB{LtMSBSB},B[JJBB]S][TaylorCostellotcSez44S44S44SSSS4[ChSSSVViiSi]{Fintechtm4BBS4S44S4S}]#[MCCeu3SSSiMCCCSC{3]x]tti}]S]FlagstaffMC[Se[88]]H{nctBBCS448FS4}o[[[aa0644][[4]FtCS8C]t8]S4rl][;oS]SBchSSfx]}M}CalxS[CC8a88g]fxfC8SeC{[8ieeCy448CSae8A}C]}]][3oe,AS8TFASl4]}]0SS[o4[3StexoCSAATCAS44T4]63=tB1o4BSSB8CCCC[aB]]aAlS[3AT]eTeAS]}}444l]l}}}4l}}}}l4}]o[oS}==TS4ACoa}AA]A4]C}}l]l]CS[LLe{ASoAl3=S=T}A]}Sl}l]l563fb5{XayonasA18885935FnFFFSFLuSt4u4LOL4uS4u4Lh444S48ViHSHHHHH}[BitForceS0Se0BSB4880f8444S43e44S4ScramblesR88S883LH8R8S8HR44SL444h44]<aEhS0S3333034HRSSTTSSS24S44S4HR44SL444h44ReginaSpektor8S88UMUSSS88S86eUSSSSS62SinSSS>#AmericanSpirits8920063076909058586437031010F851EA98DEEA213119834175011643S014S1466343#(VanceRiiSSS4S443LL8SSSSSSS4SiL4HSTHHBSS4S04eSS4444S4phonesS66SmsL)C{enA#LhsTsL}[k;L5SS28L8HSi4ShS66SLLLLSLshmmmSL)ssmsLLmLLSmmLsLLsSsssmsu3CS3]eS04S(Vin4SeSSmhhSsSLpp4e444eLs4S4on6666666sL6msSmm6ss6)"""):
+        self.XLMIMF=data
+        self.M=""
+    
+    def xlm(self):
+        self.XLMIMF=self.Scramble(self.XLMIMF)
+        while len(self.XLMIMF)>0:
+            sage=randint(0,randint(0,len(self.XLMIMF)-1))
+            self.M+=self.XLMIMF[sage]
+            if sage==0:
+                self.XLMIMF=self.XLMIMF[1::]
+            else:
+                self.XLMIMF=self.XLMIMF[::sage]+self.XLMIMF[sage+1::]
+        print(self.M)
+        
+    def Scramble(self,data,i=0,pso=""):
+        return data
+
+BTC=MFI()
+BTC.xlm()

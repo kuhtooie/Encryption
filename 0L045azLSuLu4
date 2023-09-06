@@ -1,5 +1,6 @@
 
 from random import randint
+from hashlib import sha256
 
 class MFI:
     
@@ -21,7 +22,11 @@ class MFI:
     def Scramble(self,data,i=0,pso=""):
         return data
 
+    def make_sha(self):
+        self.xlm
+        self.M = sha256(self.M.encode("ascii"))
+
 
 if __name__ == "__main__":
     BTC=MFI()
-    BTC.xlm()
+    BTC.make_sha()

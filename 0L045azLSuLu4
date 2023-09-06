@@ -21,5 +21,7 @@ class MFI:
     def Scramble(self,data,i=0,pso=""):
         return data
 
-BTC=MFI()
-BTC.xlm()
+
+if __name__ == "__main__":
+    BTC=MFI()
+    BTC.xlm()

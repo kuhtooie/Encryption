@@ -147,7 +147,7 @@ class Hash_codes:
 
         self.scramble(self.code)
 
-    def stumble(self):
+    def get_shas(self):
         self.make_sha()
         code = self.code[round((len(self.code)-1)/2)::] + self.code
         self.make_sha()
@@ -156,3 +156,7 @@ class Hash_codes:
     def shuffle_tree(self):
         pass
 
+if __name__ == "__main__":
+    sha = Hash_codes()
+    sha.get_shas()
+    sha = sha.code

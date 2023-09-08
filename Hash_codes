@@ -1,5 +1,5 @@
 from random import randint
-
+from hashlib import sha256
 
 class Hash_codes:
 
@@ -159,4 +159,4 @@ class Hash_codes:
 if __name__ == "__main__":
     sha = Hash_codes()
     sha.get_shas()
-    sha = sha.code
+    sha = sha256(sha.code)

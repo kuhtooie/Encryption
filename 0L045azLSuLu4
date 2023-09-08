@@ -23,7 +23,7 @@ class MFI:
         return data
 
     def make_sha(self):
-        self.xlm
+        self.xlm()
         self.M = sha256(self.M.encode("ascii"))
 
 

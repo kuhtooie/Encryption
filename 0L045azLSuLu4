@@ -26,6 +26,34 @@ class MFI:
         self.xlm()
         self.M = sha256(self.M.encode("ascii"))
 
+    def nonce(self):
+        self.get_nonce()
+        n = self.nonce.keys()
+        n= n[len(n)-1]
+        x=1
+
+        while x == 1:
+            n+=1
+            xlmimf=self.XLMIMF+str(n)       
+            xlmimf  = sha256(xlmimf.encode("ascii"))
+            
+            if xlmimf[::4] == "0000":
+                self.nonce[n] = n
+                x=0
+                self.save_nonce()
+                                  
+                                  
+    def get_nonce(self):
+        self.nonce = pd.read_csv("nonce_location")
+        n={}
+        for i in self.nonce.keys:
+            n[i]=i
+        self.nonce = n
+
+        
+    def save_nonce(self):
+        self.nonce = pd.Dataframe(self.nonce)
+        self.nonce.to_csv("nonce_location)
 
 if __name__ == "__main__":
     BTC=MFI()
